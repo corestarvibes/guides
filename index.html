@@ -4,165 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>Your Free Companion Guide · Chapters &amp; Channels</title>
+<title>Your Free Companion Guide &middot; Chapters &amp; Channels</title>
+<!-- GENERATED FILE — do not edit by hand. Produced by build_gateway.py from
+     chapter_state.json. To change chapters, publish a guide (SCROLL --publish)
+     and re-run build_gateway.py. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* ============================================================
-     CONFIG lives in the <script> at the bottom — edit there:
-       • MAILERLITE_ACTION  (paste from your embedded form)
-       • CHAPTERS           (guide links — already filled in)
-     ============================================================ */
   :root{
-    --bg:#0a0a12;
-    --bg2:#12101d;
-    --ink:#f4efe6;
-    --muted:#a39c8e;
-    --gold:#e8b65a;
-    --gold-soft:#f3cf86;
-    --line:rgba(232,182,90,.22);
-    --field:rgba(255,255,255,.04);
-    --field-line:rgba(255,255,255,.14);
+    --bg:#0a0a12; --bg2:#12101d; --ink:#f4efe6; --muted:#a39c8e;
+    --gold:#e8b65a; --gold-soft:#f3cf86; --line:rgba(232,182,90,.22);
+    --field:rgba(255,255,255,.04); --field-line:rgba(255,255,255,.14);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{
-    background:var(--bg);
-    color:var(--ink);
+    background:var(--bg); color:var(--ink);
     font-family:"Hanken Grotesk",system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.55;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:6vh 22px;
-    position:relative;
-    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased; line-height:1.55;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:6vh 22px; position:relative; overflow-x:hidden;
   }
-  /* luminous gold glow, echoing the glowing-book email */
   body::before{
-    content:"";
-    position:fixed;
-    inset:0;
+    content:""; position:fixed; inset:0;
     background:
       radial-gradient(120% 90% at 50% -10%, rgba(232,182,90,.20), transparent 55%),
       radial-gradient(90% 70% at 50% 120%, rgba(120,98,200,.10), transparent 60%),
       linear-gradient(180deg,var(--bg),var(--bg2));
     z-index:-2;
   }
-  /* subtle film grain */
   body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    opacity:.05;
-    pointer-events:none;
+    content:""; position:fixed; inset:0; z-index:-1; opacity:.05; pointer-events:none;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .wrap{
-    width:100%;
-    max-width:560px;
-    text-align:center;
-  }
+  .wrap{width:100%; max-width:560px; text-align:center;}
   .stamp{
-    display:inline-flex;
-    align-items:center;
-    gap:.6em;
-    font-size:.72rem;
-    letter-spacing:.34em;
-    text-transform:uppercase;
-    color:var(--gold-soft);
-    font-weight:600;
-    margin-bottom:34px;
+    display:inline-flex; align-items:center; gap:.6em; font-size:.72rem;
+    letter-spacing:.34em; text-transform:uppercase; color:var(--gold-soft);
+    font-weight:600; margin-bottom:34px;
   }
-  .stamp::before,.stamp::after{
-    content:"";
-    width:26px;height:1px;
-    background:linear-gradient(90deg,transparent,var(--gold));
-  }
+  .stamp::before,.stamp::after{content:""; width:26px;height:1px; background:linear-gradient(90deg,transparent,var(--gold));}
   .stamp::after{background:linear-gradient(90deg,var(--gold),transparent)}
-  .eyebrow{
-    font-size:.82rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin-bottom:14px;
-  }
+  .eyebrow{font-size:.82rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin-bottom:14px;}
   h1{
-    font-family:"Fraunces",Georgia,serif;
-    font-optical-sizing:auto;
-    font-weight:500;
-    font-size:clamp(2.1rem,6.5vw,3.3rem);
-    line-height:1.06;
-    letter-spacing:-.01em;
-    margin-bottom:18px;
-    text-wrap:balance;
+    font-family:"Fraunces",Georgia,serif; font-optical-sizing:auto; font-weight:500;
+    font-size:clamp(2.1rem,6.5vw,3.3rem); line-height:1.06; letter-spacing:-.01em;
+    margin-bottom:18px; text-wrap:balance;
   }
   h1 em{font-style:italic;color:var(--gold-soft)}
-  .lede{
-    color:var(--muted);
-    font-size:1.06rem;
-    max-width:42ch;
-    margin:0 auto 34px;
-  }
-  form{
-    display:flex;
-    gap:10px;
-    max-width:430px;
-    margin:0 auto;
-  }
+  .lede{color:var(--muted); font-size:1.06rem; max-width:42ch; margin:0 auto 34px;}
+  form{display:flex; gap:10px; max-width:430px; margin:0 auto;}
   .hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
   input[type=email]{
-    flex:1;
-    min-width:0;
-    background:var(--field);
-    border:1px solid var(--field-line);
-    border-radius:12px;
-    color:var(--ink);
-    font:inherit;
-    font-size:1rem;
-    padding:15px 16px;
+    flex:1; min-width:0; background:var(--field); border:1px solid var(--field-line);
+    border-radius:12px; color:var(--ink); font:inherit; font-size:1rem; padding:15px 16px;
     transition:border-color .2s,background .2s;
   }
   input[type=email]::placeholder{color:#6f695d}
-  input[type=email]:focus{
-    outline:none;
-    border-color:var(--gold);
-    background:rgba(255,255,255,.06);
-  }
+  input[type=email]:focus{outline:none; border-color:var(--gold); background:rgba(255,255,255,.06);}
   button{
-    flex:0 0 auto;
-    border:0;
-    border-radius:12px;
-    background:linear-gradient(180deg,var(--gold-soft),var(--gold));
-    color:#2a1d05;
-    font:inherit;
-    font-weight:600;
-    font-size:1rem;
-    padding:15px 22px;
-    cursor:pointer;
-    white-space:nowrap;
-    transition:transform .15s,box-shadow .2s,opacity .2s;
+    flex:0 0 auto; border:0; border-radius:12px;
+    background:linear-gradient(180deg,var(--gold-soft),var(--gold)); color:#2a1d05;
+    font:inherit; font-weight:600; font-size:1rem; padding:15px 22px; cursor:pointer;
+    white-space:nowrap; transition:transform .15s,box-shadow .2s,opacity .2s;
     box-shadow:0 8px 28px -10px rgba(232,182,90,.6);
   }
   button:hover{transform:translateY(-1px);box-shadow:0 12px 34px -10px rgba(232,182,90,.75)}
   button:active{transform:translateY(0)}
   button:disabled{opacity:.6;cursor:default;transform:none}
-  .fine{
-    margin-top:18px;
-    font-size:.82rem;
-    color:#736d61;
-  }
-  .err{
-    color:#f0a98a;
-    font-size:.85rem;
-    min-height:1.1em;
-    margin-top:12px;
-  }
-  /* chapter picker fallback (no/invalid ?ch) */
+  .fine{margin-top:18px; font-size:.82rem; color:#736d61;}
+  .err{color:#f0a98a; font-size:.85rem; min-height:1.1em; margin-top:12px;}
   .picker{display:grid;gap:10px;max-width:430px;margin:6px auto 0;text-align:left}
   .picker a{
     display:flex;justify-content:space-between;align-items:center;gap:14px;
@@ -174,8 +86,6 @@
   .picker .n{font-family:"Fraunces",serif;color:var(--gold-soft);font-size:.9rem;letter-spacing:.04em}
   .picker .t{flex:1;font-weight:500}
   .picker .arr{color:var(--gold);font-size:1.1rem}
-
-  /* entrance animation */
   .anim{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
   .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.28s}.d4{animation-delay:.4s}
   @keyframes rise{to{opacity:1;transform:none}}
@@ -189,7 +99,7 @@
     <p class="eyebrow anim d2" id="eyebrow">The Untethered Soul</p>
     <h1 class="anim d2" id="headline">Your free companion guide</h1>
     <p class="lede anim d3" id="lede">
-      Drop your email and your guide opens instantly — a three-page distillation of
+      Drop your email and your guide opens instantly &mdash; a three-page distillation of
       the chapter's core insight, key concepts, and reflection prompts.
     </p>
 
@@ -197,7 +107,7 @@
       <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="email" id="email" name="fields[email]" placeholder="you@email.com"
              autocomplete="email" required aria-label="Email address">
-      <button type="submit" id="submit">Get the guide →</button>
+      <button type="submit" id="submit">Get the guide &rarr;</button>
     </form>
     <p class="err anim d4" id="err" role="alert"></p>
     <p class="fine anim d4">Instant access. One short note when a new chapter lands. Unsubscribe anytime.</p>
@@ -206,92 +116,127 @@
   </main>
 
 <script>
-/* ===================================================================
-   CONFIG  — the only things you may need to touch
-   =================================================================== */
 const CONFIG = {
-  // Your MailerLite embedded-form endpoint (already wired — account 2229056,
-  // form 189027723089282123, group "Chapters and Channels — Spiritual Books").
-  // Nothing to change here unless you rebuild the form in MailerLite.
   MAILERLITE_ACTION: "https://assets.mailerlite.com/jsonp/2229056/forms/189027723089282123/subscribe",
-
-  // Field names as they appear in your embed code.
   EMAIL_FIELD: "fields[email]",
-  // Sent only as a bonus so a welcome email *could* include the link. Your form
-  // doesn't define this field, so MailerLite simply ignores it — harmless. The
-  // guide is delivered by the redirect regardless. Set to "" to stop sending it.
   GUIDE_FIELD: "fields[guide_url]",
-
-  // Chapter → { title, url }.  URLs are your published Drive guides.
-  // NOTE: titles for Ch1/Ch3 are my best guess from your run folders —
-  // double-check them against chapter_state.json and tweak if needed.
-  CHAPTERS: {
-    "1": { title: "The Voice Inside Your Head",        url: "https://drive.google.com/file/d/1NqOPf3fOZkpcyOFYClQQx7Vq7y0HsHut/view" },
-    "2": { title: "Your Inner Roommate",               url: "https://drive.google.com/file/d/1A6yjaTXxvTgOyNAEjvxP-Va93j6Adw9b/view" },
-    "3": { title: "Who Are You?",                       url: "https://drive.google.com/file/d/1LzHU4p5pk_nrByVKycDffaIEzPSD_yjo/view" },
-    "4": { title: "The Lucid Self",                     url: "https://drive.google.com/file/d/11gZYomd-HMmdGLyY0Rab0t18FTcPicmP/view" },
-    "5": { title: "Infinite Energy",                    url: "https://drive.google.com/file/d/1mflU2Lj_yNTpZx0hfMHNMDMmU5mwfLt0/view" },
-    "6": { title: "The Secrets of the Spiritual Heart", url: "https://drive.google.com/file/d/13N0a-sSV2lp5i0gaTD2C9s8OdG0NrniX/view" },
-    "7": { title: "Transcending the Tendency",          url: "https://drive.google.com/file/d/15Js7vKt1OLJ5eR0fm_dqffS3He_Pgnuj/view" },
-    "8": { title: "Let Go Now or Fall",                 url: "https://drive.google.com/file/d/1BEGB3g-ij8nSg2ydWJHdSnn__luNfRBO/view" }
+  DEFAULT_BOOK: "the_untethered_soul",
+  // BOOKS is generated from chapter_state.json by build_gateway.py.
+  BOOKS: {
+  "the_untethered_soul": {
+    "label": "The Untethered Soul",
+    "chapters": {
+      "1": {
+        "title": "The Voice Inside Your Head",
+        "url": "https://drive.google.com/file/d/1NqOPf3fOZkpcyOFYClQQx7Vq7y0HsHut/view"
+      },
+      "2": {
+        "title": "Your Inner Roommate",
+        "url": "https://drive.google.com/file/d/1A6yjaTXxvTgOyNAEjvxP-Va93j6Adw9b/view"
+      },
+      "3": {
+        "title": "Who Are You?",
+        "url": "https://drive.google.com/file/d/1LzHU4p5pk_nrByVKycDffaIEzPSD_yjo/view"
+      },
+      "4": {
+        "title": "The Lucid Self",
+        "url": "https://drive.google.com/file/d/11gZYomd-HMmdGLyY0Rab0t18FTcPicmP/view"
+      },
+      "5": {
+        "title": "Infinite Energy",
+        "url": "https://drive.google.com/file/d/1mflU2Lj_yNTpZx0hfMHNMDMmU5mwfLt0/view"
+      },
+      "6": {
+        "title": "The Secrets of the Spiritual Heart",
+        "url": "https://drive.google.com/file/d/13N0a-sSV2lp5i0gaTD2C9s8OdG0NrniX/view"
+      },
+      "7": {
+        "title": "Transcending the Tendency",
+        "url": "https://drive.google.com/file/d/15Js7vKt1OLJ5eR0fm_dqffS3He_Pgnuj/view"
+      },
+      "8": {
+        "title": "Let Go Now or Fall",
+        "url": "https://drive.google.com/file/d/1BEGB3g-ij8nSg2ydWJHdSnn__luNfRBO/view"
+      }
+    }
+  },
+  "the_power_of_now": {
+    "label": "The Power of Now",
+    "chapters": {}
   }
+}
 };
-/* =================================================================== */
 
 const params = new URLSearchParams(location.search);
 const ch = (params.get("ch") || "").trim();
-const chapter = CONFIG.CHAPTERS[ch];
+const bookSlug = (params.get("book") || "").trim() || CONFIG.DEFAULT_BOOK;
+const book = CONFIG.BOOKS[bookSlug] || CONFIG.BOOKS[CONFIG.DEFAULT_BOOK];
+const chapters = (book && book.chapters) || {};
+const bookLabel = (book && book.label) || "Chapters & Channels";
+const chapter = chapters[ch];
+const hasGuide = !!(chapter && chapter.url);
 
 const $ = (id) => document.getElementById(id);
 
-// Remember subscribers on this device so returning fans never re-enter their
-// email — once they've grabbed any guide here, every future chapter link opens
-// straight to the guide. (Per-browser; wrapped in try/catch so it degrades to
-// "always show the form" if storage is unavailable, e.g. private mode.)
 const MEMBER_KEY = "cc_guide_member";
 const isMember  = () => { try { return localStorage.getItem(MEMBER_KEY) === "1"; } catch (_) { return false; } };
 const setMember = () => { try { localStorage.setItem(MEMBER_KEY, "1"); } catch (_) {} };
 
-if (chapter && isMember()) {
-  // Returning subscriber on this device — skip the form, deliver instantly.
-  $("eyebrow").textContent = `The Untethered Soul · Chapter ${ch}`;
-  $("headline").innerHTML = `Welcome back — <em>opening your guide…</em>`;
+function showPicker() {
+  $("eyebrow").textContent = bookLabel;
+  $("form").hidden = true;
+  $("err").hidden = true;
+  document.querySelector(".fine").hidden = true;
+  const entries = Object.entries(chapters);
+  if (entries.length === 0) {
+    $("headline").textContent = "Guides coming soon";
+    $("lede").textContent = `Companion guides for ${bookLabel} are on the way. Check back shortly.`;
+    return;
+  }
+  $("headline").textContent = "Choose your chapter";
+  $("lede").textContent = "Pick the chapter you just watched to get its free companion guide.";
+  const picker = $("picker");
+  picker.hidden = false;
+  for (const [n, c] of entries) {
+    const a = document.createElement("a");
+    a.href = `?ch=${n}&book=${bookSlug}`;
+    a.innerHTML = `<span class="n">Ch ${n}</span><span class="t">${c.title.replace(/&/g,"&amp;")}</span><span class="arr">&rarr;</span>`;
+    picker.appendChild(a);
+  }
+}
+
+if (hasGuide && isMember()) {
+  $("eyebrow").textContent = `${bookLabel} \u00b7 Chapter ${ch}`;
+  $("headline").innerHTML = `Welcome back &mdash; <em>opening your guide&hellip;</em>`;
   $("lede").textContent = `Chapter ${ch}: ${chapter.title}`;
   $("form").hidden = true;
   $("err").hidden = true;
   document.querySelector(".fine").hidden = true;
   document.title = `Chapter ${ch}: ${chapter.title} — Companion Guide`;
   setTimeout(() => { location.href = chapter.url; }, 700);
-} else if (chapter) {
-  // New visitor on a valid chapter — personalize and show the form.
-  $("eyebrow").textContent = `The Untethered Soul · Chapter ${ch}`;
+} else if (hasGuide) {
+  $("eyebrow").textContent = `${bookLabel} \u00b7 Chapter ${ch}`;
   $("headline").innerHTML = `${chapter.title.replace(/&/g, "&amp;")} <br><em>companion guide</em>`;
   document.title = `Chapter ${ch}: ${chapter.title} — Free Companion Guide`;
-} else {
-  // No / unknown ?ch — let them pick, so the page is never a dead end.
-  $("eyebrow").textContent = "The Untethered Soul";
-  $("headline").textContent = "Choose your chapter";
-  $("lede").textContent = "Pick the chapter you just watched to get its free companion guide.";
+} else if (chapter) {
+  $("eyebrow").textContent = `${bookLabel} \u00b7 Chapter ${ch}`;
+  $("headline").textContent = "Guide coming soon";
+  $("lede").textContent = `The companion guide for Chapter ${ch} is being published. Check back shortly.`;
   $("form").hidden = true;
   $("err").hidden = true;
   document.querySelector(".fine").hidden = true;
-  const picker = $("picker");
-  picker.hidden = false;
-  for (const [n, c] of Object.entries(CONFIG.CHAPTERS)) {
-    const a = document.createElement("a");
-    a.href = `?ch=${n}`;
-    a.innerHTML = `<span class="n">Ch ${n}</span><span class="t">${c.title.replace(/&/g,"&amp;")}</span><span class="arr">→</span>`;
-    picker.appendChild(a);
-  }
+  document.title = `Chapter ${ch} — Companion Guide coming soon`;
+} else {
+  showPicker();
 }
 
 const form = $("form");
-if (form && chapter) {
+if (form && hasGuide) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const errEl = $("err");
     errEl.textContent = "";
-    if ($("form").querySelector(".hp").value) return;            // honeypot: silently ignore bots
+    if ($("form").querySelector(".hp").value) return;
     const email = $("email").value.trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       errEl.textContent = "Please enter a valid email address.";
@@ -300,44 +245,28 @@ if (form && chapter) {
     const btn = $("submit");
     btn.disabled = true;
     btn.textContent = "Opening your guide…";
-
-    // Remember them on this device so future chapters skip the form entirely.
     setMember();
-
     const deliver = () => { window.location.href = chapter.url; };
-
     const configured = CONFIG.MAILERLITE_ACTION && !CONFIG.MAILERLITE_ACTION.includes("PASTE");
     if (!configured) { deliver(); return; }
-
-    // Capture the email via a real cross-origin form POST into a hidden iframe —
-    // exactly what MailerLite's endpoint expects, so it's reliable with no API
-    // keys or CORS handling. Delivery (the redirect) happens regardless of
-    // whether the POST's response comes back, so capture never blocks the guide.
     try {
       const sink = document.createElement("iframe");
       sink.name = "ml_sink_" + Date.now();
       sink.style.display = "none";
       document.body.appendChild(sink);
-
       const ml = document.createElement("form");
       ml.action = CONFIG.MAILERLITE_ACTION;
       ml.method = "post";
       ml.target = sink.name;
       ml.style.display = "none";
-      const add = (n, v) => {
-        const i = document.createElement("input");
-        i.type = "hidden"; i.name = n; i.value = v;
-        ml.appendChild(i);
-      };
+      const add = (n, v) => { const i = document.createElement("input"); i.type = "hidden"; i.name = n; i.value = v; ml.appendChild(i); };
       add(CONFIG.EMAIL_FIELD, email);
       if (CONFIG.GUIDE_FIELD) add(CONFIG.GUIDE_FIELD, chapter.url);
       add("ml-submit", "1");
       add("anticsrf", "true");
       document.body.appendChild(ml);
       ml.submit();
-    } catch (_) { /* if anything fails, still deliver the guide */ }
-
-    // Give the POST a beat to leave the browser, then open the guide.
+    } catch (_) {}
     setTimeout(deliver, 900);
   });
 }
